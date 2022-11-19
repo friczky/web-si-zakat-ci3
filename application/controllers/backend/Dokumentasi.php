@@ -16,12 +16,6 @@ class Dokumentasi extends CI_Controller
 		$this->load->view('backend/dokumentasi/index', $data);
 	}
 
-	public function tambah()
-	{
-		$data['title'] = 'Tambah dokumentasi';
-		$this->load->view('backend/dokumentasi/tambah', $data);
-	}
-
 	public function store()
 	{
 		$config['allowed_types'] = 'jpg|png|gif';

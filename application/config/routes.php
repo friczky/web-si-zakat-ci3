@@ -33,6 +33,11 @@ $route['dashboard/dokumentasi']				= 'backend/dokumentasi';
 $route['dashboard/dokumentasi/tambah']		= 'backend/dokumentasi/tambah';
 $route['dashboard/dokumentasi/edit/(:any)']	= 'backend/dokumentasi/edit/$1';
 
+// layanan
+$route['dashboard/layanan']				= 'backend/layanan';
+$route['dashboard/layanan/tambah']		= 'backend/layanan/tambah';
+$route['dashboard/layanan/edit/(:any)']	= 'backend/layanan/edit/$1';
+
 // Profile
 $route['dashboard/profile']					= 'backend/profile';
 $route['dashboard/pendaftaran/tambah']		= 'backend/pendaftaran/tambah';

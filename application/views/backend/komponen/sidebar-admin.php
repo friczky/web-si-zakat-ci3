@@ -116,7 +116,7 @@
                         <i class="nav-icon fas fa-tasks"></i>
                         <p>
                             Layanan
-							<span class="badge badge-danger right"><?= $this->db->count_all('')?></span>
+							<span class="badge badge-danger right"><?= $this->db->count_all('tb_layanan')?></span>
                         </p>
                     </a>
                 </li>
