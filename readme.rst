@@ -9,6 +9,8 @@ Fitur-Fitur
 1. Manjemen User
 2. Manajemen Berita
 2. Manajemen Dokumentasi Foto
+3. Manajemen Layanan Zakat
+4. Manajemen Donasi
 
 *******************
 Server Requirements

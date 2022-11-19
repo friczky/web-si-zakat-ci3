@@ -34,7 +34,14 @@ $this->load->view('backend/komponen/sidebar-admin');
 		<div class="container-fluid">
 			<div class="card">
 				<div class="card-header">
-					<h3 class="card-title">Data Semua Berita.</h3>
+				<div class="row">
+								<div class="col-sm-6">
+								<h3 class="card-title">Data Semua Berita.</h3>
+								</div>
+								<div class="col-sm-6" align="right">
+									<a href="berita/tambah" class="btn btn-success" > <i class="fa fa-plus"></i> Tambah Berita</a>
+								</div>
+							 </div>
 				</div>
 				<!-- /.card-header -->
 

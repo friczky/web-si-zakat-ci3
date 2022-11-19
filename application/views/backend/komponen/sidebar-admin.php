@@ -73,12 +73,6 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/berita/tambah" class="nav-link ">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tambah Berita</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
                             <a href="<?= base_url()?>dashboard/berita" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Berita</p>

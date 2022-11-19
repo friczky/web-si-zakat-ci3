@@ -133,7 +133,7 @@
                         </div>
                         <div class="col-sm-10">
 							<select name="kategori" id="" class="form-control" required>
-								<option value="<?= $data->nama?>"><?= $data->nama?> (Terpilih)</option>
+								<option value="<?= $data->kategori?>"><?= $data->kategori?> (Terpilih)</option>
 								<option value="Pemasukan">Pemasukan</option>
 								<option value="Pengeluaran">Pengeluaran</option>
 							</select>

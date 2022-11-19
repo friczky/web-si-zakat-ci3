@@ -36,7 +36,7 @@ $this->load->view('backend/komponen/sidebar-admin');
 								<h3 class="card-title">Data Semua Pengguna.</h3>
 								</div>
 								<div class="col-sm-6" align="right">
-									<a href="tambah" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah Pengguna</a>
+									<a href="pengguna/tambah" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah Pengguna</a>
 								</div>
 							 </div>
               </div>
