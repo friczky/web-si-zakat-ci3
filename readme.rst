@@ -8,6 +8,7 @@ Fitur-Fitur
 
 1. Manjemen User
 2. Manajemen Berita
+2. Manajemen Dokumentasi Foto
 
 *******************
 Server Requirements
