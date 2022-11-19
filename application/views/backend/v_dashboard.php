@@ -115,7 +115,12 @@ $this->load->view('backend/komponen/sidebar-admin');
 					</div>
 					<div class="col-sm-6">
 						<!-- chart  -->
-
+						<div class="card">
+							<div class="card-body">
+								<div class="card-header"><h3>Grafik Donasi</h3></div>
+								<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 

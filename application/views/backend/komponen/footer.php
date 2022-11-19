@@ -85,6 +85,7 @@ src="<?= base_url()?>assets/backend/plugins/datatables-buttons/js/buttons.colVis
 <!-- <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script> -->
 <!-- Summernote -->
 <script src="<?= base_url()?>assets/backend/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="<?= base_url()?>assets/backend/plugins/chart.js/Chart.js"></script>
 
 
 <script>

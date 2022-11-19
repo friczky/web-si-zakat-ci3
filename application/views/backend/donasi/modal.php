@@ -1,17 +1,17 @@
-<!-- modal tambah layanan -->
+<!-- modal tambah donasi -->
 
 <div class="modal fade" id="tambah" style="display: none;" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-default">
             <div class="modal-header">
-                <h4 class="modal-title">Tambah layanan</h4>
+                <h4 class="modal-title">Tambah donasi</h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
             <div class="modal-body">
                 <form
-                    action="<?= base_url()?>backend/layanan/store"
+                    action="<?= base_url()?>backend/donasi/store"
                     method="post"
                     enctype="multipart/form-data">
 
@@ -23,7 +23,41 @@
                             type="text"
                             name="nama"
                             class="form-control"
-                            placeholder="Masukan Nama layanan"></div>
+                            placeholder="Masukan Nama donasi"></div>
+                    </div>
+
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Jumlah</label>
+                        </div>
+                        <div class="col-sm-10"><input
+                            type="number"
+                            name="jumlah"
+                            class="form-control"
+                            placeholder="Masukan Jumlah"></div>
+                    </div>
+
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Kategori</label>
+                        </div>
+                        <div class="col-sm-10">
+							<select name="kategori" id="" class="form-control">
+								<option value="Pemasukan">Pemasukan</option>
+								<option value="Pengeluaran">Pengeluaran</option>
+							</select>
+						</div>
+                    </div>
+
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Tanggal</label>
+                        </div>
+                        <div class="col-sm-10"><input
+                            type="date"
+                            name="tanggal"
+                            class="form-control"
+                            ></div>
                     </div>
 
                     <div class="form-group row">
@@ -31,7 +65,7 @@
                             <label for="">Deskripsi</label>
                         </div>
                         <div class="col-sm-10">
-						<textarea name="deskripsi" class="form-control" id="" cols="10" rows="10"></textarea>		
+						<textarea name="deskripsi" class="form-control" id="" cols="10" rows="5"></textarea>		
 						</div>
                     </div>
 
@@ -53,8 +87,8 @@
 </div>
 
 
-<!-- modal edit layanan -->
-<?php $no=1; foreach ($layanan as $data): ?>
+<!-- modal edit donasi -->
+<?php $no=1; foreach ($donasi as $data): ?>
 <div
     class="modal fade"
     id="edit<?= $data->id?>"
@@ -63,7 +97,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content bg-default">
             <div class="modal-header">
-                <h4 class="modal-title">Edit layanan :
+                <h4 class="modal-title">Edit donasi :
                     <?= $data->nama?></h4>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
@@ -71,7 +105,7 @@
             </div>
             <div class="modal-body">
                 <form
-                    action="<?= base_url()?>backend/layanan/update/<?= $data->id?>"
+                    action="<?= base_url()?>backend/donasi/update/<?= $data->id?>"
                     method="post"
                     enctype="multipart/form-data">
 
@@ -87,7 +121,7 @@
                             <label for="">Deskripsi</label>
                         </div>
                         <div class="col-sm-10">
-						<textarea name="deskripsi" class="form-control" id="" cols="30" rows="10"><?= $data->deskripsi?></textarea>		
+						<textarea name="deskripsi" class="form-control" id="" cols="30" rows="5"><?= $data->deskripsi?></textarea>		
 					</div>
                     </div>
 
