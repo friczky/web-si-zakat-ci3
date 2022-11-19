@@ -5,10 +5,10 @@
 	<?php $data = $this->db->get('tb_sistem')->row_array()?>
         <img
             src="<?= base_url()?>uploads/sistem/<?= $data['logo']?>"
-            alt="AdminLTE Logo"
+            alt="Logo"
             class="brand-image img-rounded shadow elevation-3 bg-white"
-            style="opacity: .8">
-        <span class="brand-text font-weight-light">PPM Nurba</span>
+            style="opacity: 100;">
+        <span class="brand-text ">Admin Panel</span>
     </a>
 
     <!-- Sidebar -->
@@ -66,7 +66,7 @@
                     <a href="#" class="nav-link ">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
-                            Man Berita
+                            Berita
                             <i class="fas fa-angle-left right"></i>
                             <span class="badge badge-primary right"><?= $this->db->count_all('tb_berita')?></span>
                         </p>
@@ -99,56 +99,63 @@
                     </ul>
                 </li>
 
-                
+				 <!-- Dokumentasi Page  -->
+				 <li class="nav-item">	
+                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                        <i class="nav-icon fas fa-image"></i>
+                        <p>
+                            Dokumentasi
+                        </p>
+                    </a>
+                </li>
+
+				 <!-- Layanan Page  -->
+				 <li class="nav-item">	
+                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                        <i class="nav-icon fas fa-tasks"></i>
+                        <p>
+                            Layanan
+                        </p>
+                    </a>
+                </li>
+
+                 <!-- Layanan Page  -->
+				 <li class="nav-item">	
+                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                        <i class="nav-icon fas fa-money-bill"></i>
+                        <p>
+                            Donasi
+                        </p>
+                    </a>
+                </li>
+
                 <!-- Users Page  -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link">
+					<a href="<?= base_url()?>dashboard/pengguna" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
-                            Man Pengguna
-                            <i class="fas fa-angle-left right"></i>
+                            Pengguna
                             <span class="badge badge-success right"><?= $this->db->count_all('tb_pengguna')?></span>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/pengguna/tambah" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tambah Pengguna</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/pengguna" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Data Pengguna</p>
-                            </a>
-                        </li>
-                    </ul>
                 </li>
 
-				<!-- Settings Page  -->
-				<li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-cogs"></i>
+				<li class="nav-item">	
+                    <a href="<?= base_url()?>dashboard/sistem/kontak" class="nav-link">
+                        <i class="nav-icon fas fa-hashtag"></i>
                         <p>
-                            Pengaturan Web
-                            <i class="fas fa-angle-left right"></i>
+                            Kontak
                         </p>
                     </a>
-                    <ul class="nav nav-treeview">
-                        <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/sistem/kontak" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Kontak</p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/sistem" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Tentang</p>
-                            </a>
-                        </li>
-                    </ul>
+                </li>
+
+				<li class="nav-item">	
+                    <a href="<?= base_url()?>dashboard/sistem" class="nav-link">
+                        <i class="nav-icon fas fa-info-circle"></i>
+                        <p>
+                            Tentang Web
+                        </p>
+                    </a>
                 </li>
 
                 <li class="nav-item">	

@@ -31,7 +31,14 @@ $this->load->view('backend/komponen/sidebar-admin');
       <div class="container-fluid">
 		<div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Semua Pengguna.</h3>
+               <div class="row">
+								<div class="col-sm-6">
+								<h3 class="card-title">Data Semua Pengguna.</h3>
+								</div>
+								<div class="col-sm-6" align="right">
+									<a href="tambah" class="btn btn-success"> <i class="fa fa-plus"></i> Tambah Pengguna</a>
+								</div>
+							 </div>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
@@ -63,8 +70,8 @@ $this->load->view('backend/komponen/sidebar-admin');
 										</td>
 										<td><img src="<?= base_url()?>uploads/pengguna/<?= $p->foto?>" width="50px" alt=""></td>
 										<td>
-										<a href="<?= base_url()?>dashboard/pengguna/edit/<?= $p->id_pengguna?>" class="btn btn-primary">Edit</a>
-										<a href="<?= base_url()?>backend/pengguna/hapus/<?= $p->id_pengguna?>" onclick="return confirm('Apakah ingin menghapus pengguna ini ?');" class="btn btn-danger">Hapus</a>
+										<a href="<?= base_url()?>dashboard/pengguna/edit/<?= $p->id_pengguna?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
+										<a href="<?= base_url()?>backend/pengguna/hapus/<?= $p->id_pengguna?>" onclick="return confirm('Apakah ingin menghapus pengguna ini ?');" class="btn btn-danger"><i class="fa fa-trash"></i></a>
 										</td>
                   </tr>
 									<?php endforeach; ?>
