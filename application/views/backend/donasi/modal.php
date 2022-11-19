@@ -23,7 +23,7 @@
                             type="text"
                             name="nama"
                             class="form-control"
-                            placeholder="Masukan Nama donasi"></div>
+                            placeholder="Masukan Nama donasi" required></div>
                     </div>
 
 					<div class="form-group row">
@@ -34,7 +34,7 @@
                             type="number"
                             name="jumlah"
                             class="form-control"
-                            placeholder="Masukan Jumlah"></div>
+                            placeholder="Masukan Jumlah" required></div>
                     </div>
 
 					<div class="form-group row">
@@ -42,7 +42,7 @@
                             <label for="">Kategori</label>
                         </div>
                         <div class="col-sm-10">
-							<select name="kategori" id="" class="form-control">
+							<select name="kategori" id="" class="form-control" required> 
 								<option value="Pemasukan">Pemasukan</option>
 								<option value="Pengeluaran">Pengeluaran</option>
 							</select>
@@ -56,16 +56,16 @@
                         <div class="col-sm-10"><input
                             type="date"
                             name="tanggal"
-                            class="form-control"
+                            class="form-control" required
                             ></div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-2">
-                            <label for="">Deskripsi</label>
+                            <label for="">Keterangan</label>
                         </div>
                         <div class="col-sm-10">
-						<textarea name="deskripsi" class="form-control" id="" cols="10" rows="5"></textarea>		
+						<textarea name="keterangan" class="form-control" id="" cols="10" rows="5" required></textarea>		
 						</div>
                     </div>
 
@@ -113,15 +113,50 @@
                         <div class="col-sm-2">
                             <label for="">Nama</label>
                         </div>
-                        <div class="col-sm-10"><input type="text" name="nama" class="form-control" value="<?= $data->nama?>"></div>
+                        <div class="col-sm-10"><input type="text" name="nama" class="form-control" value="<?= $data->nama?>" required></div>
+                    </div>
+
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Jumlah</label>
+                        </div>
+                        <div class="col-sm-10"><input
+                            type="number"
+                            name="jumlah"
+                            class="form-control"
+                            placeholder="Masukan Jumlah" value="<?= $data->jumlah?>" required></div>
+                    </div>
+
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Kategori</label>
+                        </div>
+                        <div class="col-sm-10">
+							<select name="kategori" id="" class="form-control" required>
+								<option value="<?= $data->nama?>"><?= $data->nama?> (Terpilih)</option>
+								<option value="Pemasukan">Pemasukan</option>
+								<option value="Pengeluaran">Pengeluaran</option>
+							</select>
+						</div>
+                    </div>
+
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Tanggal</label>
+                        </div>
+                        <div class="col-sm-10"><input
+                            type="date"
+                            name="tanggal"
+                            class="form-control"
+							value="<?= $data->tanggal?>" required></div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-2">
-                            <label for="">Deskripsi</label>
+                            <label for="">Keterangan</label>
                         </div>
                         <div class="col-sm-10">
-						<textarea name="deskripsi" class="form-control" id="" cols="30" rows="5"><?= $data->deskripsi?></textarea>		
+						<textarea name="keterangan" class="form-control" id="" cols="30" rows="5" required><?= $data->keterangan?></textarea>		
 					</div>
                     </div>
 

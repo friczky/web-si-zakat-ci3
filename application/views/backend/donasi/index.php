@@ -61,7 +61,7 @@ $this->load->view('backend/komponen/sidebar-admin');
                     <td><?= $data->nama?></td>
                     <td><?= $data->kategori?></td>
                     <td><?= $data->tanggal?></td>
-                    <td><?= $data->deskripsi?></td>
+                    <td><?= $data->keterangan?></td>
 										<td>
 										<a href="#edit" data-toggle="modal" data-target="#edit<?= $data->id?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 										<a href="<?= base_url()?>backend/donasi/hapus/<?= $data->id?>" onclick="return confirm('Apakah ingin menghapus donasi ini ?');" class="btn btn-danger"><i class="fa fa-trash"></i></a>

@@ -20,11 +20,10 @@ class Donasi extends CI_Controller
 	{
 		$data = [
 			'nama'			=> $this->input->post('nama'),
-			'keterangan'		=> $this->input->post('keterangan'),
+			'jumlah'		=> $this->input->post('jumlah'),
 			'kategori'		=> $this->input->post('kategori'),
 			'tanggal'		=> date('d-m-Y', strtotime($this->input->post('tanggal'))),
-			'jumlah'		=> $this->input->post('jumlah'),
-
+			'keterangan'		=> $this->input->post('keterangan'),
 		];
 		$this->db->insert('tb_donasi', $data);
 		$this->session->set_flashdata('sukses', '<div class="alert alert-success">Berhasil menambahkan donasi !</div>');
@@ -35,7 +34,10 @@ class Donasi extends CI_Controller
 	{
 		$data = [
 			'nama'			=> $this->input->post('nama'),
-			'deskripsi'		=> $this->input->post('deskripsi'),
+			'jumlah'		=> $this->input->post('jumlah'),
+			'kategori'		=> $this->input->post('kategori'),
+			'tanggal'		=> date('d-m-Y', strtotime($this->input->post('tanggal'))),
+			'keterangan'	=> $this->input->post('keterangan'),
 		];
 		$this->db->where('id', $id)->update('tb_donasi', $data);
 		$this->session->set_flashdata('sukses', '<div class="alert alert-success">Berhasil memperbahrui donasi !</div>');

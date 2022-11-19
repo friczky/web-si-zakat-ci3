@@ -22,7 +22,7 @@
                             type="text"
                             name="nama"
                             class="form-control"
-                            placeholder="Masukan Nama Dokumentasi"></div>
+                            placeholder="Masukan Nama Dokumentasi" required></div>
                     </div>
 
                     <div class="form-group row">
@@ -33,7 +33,7 @@
                             type="text"
                             name="deskripsi"
                             class="form-control"
-                            placeholder="Masukan Deskripsi"></div>
+                            placeholder="Masukan Deskripsi" required></div>
                     </div>
 
                     <div class="form-group row">
@@ -47,14 +47,14 @@
                             value=""
                             min="2000-01-01"
                             max="2100-12-31"
-                            class="form-control"></div>
+                            class="form-control" required></div>
                     </div>
 
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label for="">Foto</label>
                         </div>
-                        <div class="col-sm-10"><input type="file" name="foto" class="form-control"></div>
+                        <div class="col-sm-10"><input type="file" name="foto" class="form-control" required></div>
                     </div>
 
                     <div class="form-group row">
