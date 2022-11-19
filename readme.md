@@ -1,10 +1,7 @@
-###################
-Aplikasi Sistem Informasi Zakat CodeIgniter3 Open Source
-###################
+### Aplikasi Sistem Informasi Zakat CodeIgniter3 Open Source
 
-*******************
-Fitur-Fitur
-*******************
+
+### Features
 
 1. Manjemen User
 2. Manajemen Berita
@@ -19,9 +16,7 @@ Server Requirements
 - PHP : 7.4
 - DBMS : MYSQL
 
-************
-Installation
-************
+### Installation
 
 1. Clone atau Download Source Code aplikasi ini terlebih dahulu.
 2. Ekstrak apabila mendownload file zip.
@@ -29,25 +24,11 @@ Installation
 3. Buka Halaman Login (url_aplikasi/login).
 4. Masukan Username dan password (admin/admin).
 
-*******
-License
-*******
+### Licences
 
 Aplikasi ini bersifat opensource dan dapat dikembangkan sebagaimana yang dibutuhkan.
 
-*********
-Sumber Daya
-*********
+### Resources
 
 - CodeIgniter 3
 - AdminLte (BackEnd View)
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
