@@ -9,9 +9,7 @@
 3. Manajemen Layanan Zakat
 4. Manajemen Donasi
 
-*******************
-Server Requirements
-*******************
+### Server Requirements
 
 - PHP : 7.4
 - DBMS : MYSQL
