@@ -101,30 +101,33 @@
 
 				 <!-- Dokumentasi Page  -->
 				 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/dokumentasi" class="nav-link">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             Dokumentasi
+							<span class="badge badge-warning right"><?= $this->db->count_all('tb_dokumentasi')?></span>
                         </p>
                     </a>
                 </li>
 
 				 <!-- Layanan Page  -->
 				 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/layanan" class="nav-link">
                         <i class="nav-icon fas fa-tasks"></i>
                         <p>
                             Layanan
+							<span class="badge badge-danger right"><?= $this->db->count_all('')?></span>
                         </p>
                     </a>
                 </li>
 
                  <!-- Layanan Page  -->
 				 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/donasi" class="nav-link">
                         <i class="nav-icon fas fa-money-bill"></i>
                         <p>
                             Donasi
+							<span class="badge badge-secondary right"><?= $this->db->count_all('')?></span>
                         </p>
                     </a>
                 </li>

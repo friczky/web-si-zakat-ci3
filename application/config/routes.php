@@ -28,6 +28,11 @@ $route['dashboard/pengguna/tambah']			= 'backend/pengguna/tambah';
 $route['dashboard/pengguna/role']			= 'backend/pengguna/role';
 $route['dashboard/pengguna/edit/(:any)']	= 'backend/pengguna/edit/$1';
 
+// dokumentasi
+$route['dashboard/dokumentasi']				= 'backend/dokumentasi';
+$route['dashboard/dokumentasi/tambah']		= 'backend/dokumentasi/tambah';
+$route['dashboard/dokumentasi/edit/(:any)']	= 'backend/dokumentasi/edit/$1';
+
 // Profile
 $route['dashboard/profile']					= 'backend/profile';
 $route['dashboard/pendaftaran/tambah']		= 'backend/pendaftaran/tambah';
@@ -35,7 +40,6 @@ $route['dashboard/pendaftaran/pengaturan']	= 'backend/pendaftaran/pengaturan';
 $route['dashboard/pendaftaran/edit/(:any)']	= 'backend/pendaftaran/edit/$1';
 
 // Sistem
-
 $route['dashboard/sistem']					= 'backend/sistem';
 $route['dashboard/sistem/kontak']			= 'backend/sistem/kontak';
 
