@@ -93,6 +93,17 @@
                     </ul>
                 </li>
 
+				<!-- Slider Page  -->
+				<li class="nav-item">	
+                    <a href="<?= base_url()?>dashboard/slider" class="nav-link">
+                        <i class="nav-icon fas fa-image"></i>
+                        <p>
+                            Slider
+							<span class="badge badge-success right"><?= $this->db->count_all('tb_slider')?></span>
+                        </p>
+                    </a>
+                </li>
+
 				 <!-- Dokumentasi Page  -->
 				 <li class="nav-item">	
                     <a href="<?= base_url()?>dashboard/dokumentasi" class="nav-link">

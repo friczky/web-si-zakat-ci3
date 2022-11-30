@@ -3,24 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Frontend extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
+
 	public function index()
 	{
 		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
+		$data['title'] = 'Home - '.$data['sistem']['nama_web'];
 		$this->load->view('frontend/index',$data);
 	}
 }

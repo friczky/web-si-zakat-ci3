@@ -42,6 +42,11 @@ $route['dashboard/dokumentasi']				= 'backend/dokumentasi';
 $route['dashboard/dokumentasi/tambah']		= 'backend/dokumentasi/tambah';
 $route['dashboard/dokumentasi/edit/(:any)']	= 'backend/dokumentasi/edit/$1';
 
+// slider
+$route['dashboard/slider']				= 'backend/slider';
+$route['dashboard/slider/tambah']		= 'backend/slider/tambah';
+$route['dashboard/slider/edit/(:any)']	= 'backend/slider/edit/$1';
+
 // layanan
 $route['dashboard/layanan']				= 'backend/layanan';
 $route['dashboard/layanan/tambah']		= 'backend/layanan/tambah';

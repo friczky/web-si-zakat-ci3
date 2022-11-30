@@ -4,9 +4,6 @@ include 'komponen/navbar.php';
 
 ?>
 
-
-  
-                 
   <!-- ******************** Slider Starts Here ******************* -->
     <div class="slider">
         <!-- Set up your HTML -->
@@ -66,7 +63,7 @@ include 'komponen/navbar.php';
 
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
-                <h2>About Our Charity</h2>
+                <h2>Tentang <?= $sistem['nama_web']?></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus
                     ligula non congue. Suspendisse at pretium massa, sit amet
                     vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl </p>
@@ -89,25 +86,25 @@ include 'komponen/navbar.php';
                     <div class="col-md-6">
                         <div class="about-qcard">
                            <i class="fas fa-user"></i>
-                            <p>Becom a Volunteer</p>
+                            <p>Menjadi Volunteer</p>
                         </div>
                     </div>
                      <div class="col-md-6">
                         <div class="about-qcard ">
                            <i class="fas fa-search-dollar red"></i>
-                            <p>Quick Fundrais</p>
+                            <p>Mencari Dana Bantuan</p>
                         </div>
                     </div>
                      <div class="col-md-6">
                         <div class="about-qcard ">
                            <i class="fas fa-donate yell"></i>
-                            <p>Giv Donation</p>
+                            <p>Memberikan Bantuan Donasi</p>
                         </div>
                     </div>
                      <div class="col-md-6">
                         <div class="about-qcard ">
                            <i class="fas fa-hands-helping blu"></i>
-                            <p>Help Someone</p>
+                            <p>Membantu Sesama</p>
                         </div>
                     </div>
                 </div>
@@ -117,31 +114,7 @@ include 'komponen/navbar.php';
 </div>     
    
    
-    
- <!-- ################# Mission Vision Start Here #######################--->
-  
-  <section class="container-fluid mission-vision">
-      <div class="container">
-          <div class="row mission">
-              <div class="col-md-6 mv-det">
-                  <h1>Our Mission</h1>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer neque libero, pulvinar et elementum quis, facilisis eu ante. Mauris non placerat sapien. Pellentesque tempor arcu non odio scelerisque ullamcorper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius eros consequat auctor gravida. Fusce tristique lacus at urna sollicitudin pulvinar. Suspendisse hendrerit ultrices mauris.</p>
-              </div>
-              <div class="col-md-6 mv-img">
-                  <img src="<?= base_url()?>assets/frontend/images/misin.jpg" alt="">
-              </div>
-          </div>
-          <div class="row vision">
-              <div class="col-md-6 mv-img">
-                   <img src="<?= base_url()?>assets/frontend/images/vision.jpg" alt="">
-              </div>
-              <div class="col-md-6 mv-det">
-                   <h1>Our Vision</h1>
-                   <p>Ut ultricies lacus a rutrum mollis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed porta dolor quis felis pulvinar dignissim. Etiam nisl ligula, ullamcorper non metus vitae, maximus efficitur mi. Vivamus ut ex ullamcorper, scelerisque lacus nec, commodo dui. Proin massa urna, volutpat vel augue eget, iaculis tristique dui.</p>
-              </div>
-          </div>
-      </div>
-  </section>   
+
    
 
     
@@ -149,7 +122,7 @@ include 'komponen/navbar.php';
     <section class="events">
         <div class="container">
             <div class="session-title row">
-                <h2>Popular Causes</h2>
+                <h2>Layanan & Program</h2>
                 <p>We are a non-profital & Charity raising money for child education</p> 
             </div>
             <div class="event-ro row">
@@ -187,91 +160,8 @@ include 'komponen/navbar.php';
     
 
    
-   
-    <!-- ################# Charity Number Starts Here#######################--->
 
-
-    <div class="doctor-message">
-        <div class="inner-lay">
-            <div class="container">
-               <div class="row session-title">
-                   <h2>Our Achievemtns in Numbers</h2>
-                   <p>We can talk for a long time about advantages of our Dental clinic before other medical treatment facilities.
-But you can read the following facts in order to make sure of all pluses of our clinic:</p>
-               </div>
-                <div class="row">
-                    <div class="col-sm-3 numb">
-                        <h3>12+</h3>
-                        <span>YEARS OF EXPEREANCE</span>
-                    </div>
-                    <div class="col-sm-3 numb">
-                        <h3>1812+</h3>
-                        <span>HAPPY CHILDRENS</span>
-                    </div>
-                    <div class="col-sm-3 numb">
-                        <h3>52+</h3>
-                        <span>EVENTS</span>
-                    </div>
-                    <div class="col-sm-3 numb">
-                        <h3>48+</h3>
-                        <span>FUNT RAISED</span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div> 
-         
-    <!--################### Our Team Starts Here #######################--->
-          <section class="our-team team-11">
-            <div class="container">
-                <div class="session-title row">
-                      <h2>Meet our Team</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce fringilla vel nisl a dictum. Donec ut est arcu. Donec hendrerit velit</p>
-                </div>
-                <div class="row team-row">
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="<?= base_url()?>assets/frontend/images/team/team-memb1.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>CEO </i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="<?= base_url()?>assets/frontend/images/team/team-memb2.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>CFO</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="<?= base_url()?>assets/frontend/images/team/team-memb3.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>Team Leader</i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6">
-                        <div class="single-usr">
-                            <img src="<?= base_url()?>assets/frontend/images/team/team-memb4.jpg" alt="">
-                            <div class="det-o">
-                                <h4>David Kanuel</h4>
-                                <i>Project Manager</i>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </section>      
+     
          
           
     
@@ -280,7 +170,7 @@ But you can read the following facts in order to make sure of all pluses of our 
     <section class="our-blog">
          	<div class="container">
          		<div class="row session-title">
-        			<h2> Our Blog </h2>
+        			<h2> Berita </h2>
         			<p>Take a look at what people say about US </p>
         		</div>
         		<div class="blog-row row">
@@ -339,78 +229,6 @@ But you can read the following facts in order to make sure of all pluses of our 
          	</div>
          </section>
           
-      <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-12">
-                    <h2>About Us</h2>
-                    <p>
-                        Smart Eye is a leading provider of information technology, consulting, and business process services. Our dedicated employees offer strategic insights, technological expertise and industry experience.
-                    </p>
-                    <p>We focus on technologies that promise to reduce costs, streamline processes and speed time-to-market, Backed by our strong quality processes and rich experience managing global... </p>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <h2>Useful Links</h2>
-                    <ul class="list-unstyled link-list">
-                        <li><a ui-sref="about" href="#/about">About us</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="portfolio" href="#/portfolio">Portfolio</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="products" href="#/products">Latest jobs</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="gallery" href="#/gallery">Gallery</a><i class="fa fa-angle-right"></i></li>
-                        <li><a ui-sref="contact" href="#/contact">Contact us</a><i class="fa fa-angle-right"></i></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-12 map-img">
-                    <h2>Contact Us</h2>
-                    <address class="md-margin-bottom-40">
-                        BlueDart <br>
-                        Marthandam (K.K District) <br>
-                        Tamil Nadu, IND <br>
-                        Phone: +91 9159669599 <br>
-                        Email: <a href="mailto:info@anybiz.com" class="">info@bluedart.in</a><br>
-                        Web: <a href="smart-eye.html" class="">www.bluedart.in</a>
-                    </address>
-
-                </div>
-            </div>
-            
-            
-            <div class="nav-box row clearfix">
-                <div class="inner col-md-9 clearfix">
-                    <ul class="footer-nav clearfix">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Servies</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-
-                  
-                </div>
-                  <div class="donate-link col-md-3"><a href="donate.html" class="btn btn-primary "><span class="btn-title">Donate Now</span></a></div>
-            </div>
-            
-        </div>
-        
-
-    </footer>
-    <div class="copy">
-            <div class="container">
-                <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by Smarteyeapps</a>
-                
-                <span>
-                <a><i class="fab fa-github"></i></a>
-                <a><i class="fab fa-google-plus-g"></i></a>
-                <a><i class="fab fa-pinterest-p"></i></a>
-                <a><i class="fab fa-twitter"></i></a>
-                <a><i class="fab fa-facebook-f"></i></a>
-        </span>
-            </div>
-
-        </div>
-          
-    
-
 <?php 
 include 'komponen/footer.php';
 
