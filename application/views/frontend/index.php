@@ -133,14 +133,7 @@ include 'komponen/navbar.php';
             </div>
         </div>
     </section>   
-    
 
-   
-
-     
-         
-          
-    
     <!-- ################# Our Blog Starts Here#######################--->
 
     <section class="our-blog">
