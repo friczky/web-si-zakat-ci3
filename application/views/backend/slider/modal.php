@@ -41,7 +41,10 @@
                         <div class="col-sm-2">
                             <label for="">Foto</label>
                         </div>
-                        <div class="col-sm-10"><input type="file" name="foto" class="form-control" required></div>
+                        <div class="col-sm-10">
+							<input type="file" name="foto" class="form-control" required>
+							Gunakan Ukuran : 1568 x 626 px
+						</div>
                     </div>
 
                     <div class="form-group row">
@@ -82,7 +85,7 @@
                     action="<?= base_url()?>backend/slider/update/<?= $data->id?>"
                     method="post"
                     enctype="multipart/form-data">
-
+					
                     <div class="form-group row">
                         <div class="col-sm-2">
                             <label for="">judul</label>
@@ -112,11 +115,13 @@
                                 width="200px"
                                 alt="">
                             <input type="file" name="foto" class="form-control">
+							Gunakan Ukuran : 1568 x 626 px
                             <input
                                 type="hidden"
                                 name="foto_old"
                                 value="<?= $data->foto?>"
                                 class="form-control">
+
                         </div>
                     </div>
 

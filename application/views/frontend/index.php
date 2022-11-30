@@ -147,62 +147,32 @@ include 'komponen/navbar.php';
          	<div class="container">
          		<div class="row session-title">
         			<h2> Berita </h2>
-        			<p>Take a look at what people say about US </p>
+        			<p>Menampilkan Informasi Berita Terbaru. </p>
         		</div>
         		<div class="blog-row row">
+
+				<?php foreach ($berita as $data) : ?>
         			<div class="col-md-4 col-sm-6">
         				<div class="single-blog">
         					<figure>
-        						<img src="<?= base_url()?>assets/frontend/images/events/image_01.jpg" alt="">
+        						<img src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>" alt="">
         					</figure>
         					<div class="blog-detail">
-        						<small>By Admin | August 10 2018</small>
-								<h4>Methods of Recuirtments</h4>
-								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-								<div class="link">
-									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
+        						<small>By <?= $data->nama?> | <?= $data->waktu_buat?></small>
+								<h4><?= $data->judul?></h4>
+								<p><?= $data->konten?></p>
+								<div class="">
+									<a href="" class="btn btn-primary">Baca </a>
 								</div>
         					</div>
-        					
-        					
         				</div>
         			</div>
-        			<div class="col-md-4 col-sm-6">
-        				<div class="single-blog">
-        					<figure>
-        						<img src="<?= base_url()?>assets/frontend/images/events/image_02.jpg" alt="">
-        					</figure>
-        					<div class="blog-detail">
-        						<small>By Admin | August 10 2018</small>
-								<h4>Methods of Recuirtments</h4>
-								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-								<div class="link">
-									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
-								</div>
-        					</div>
-        					
-        					
-        				</div>
-        			</div>
-        			<div class="col-md-4 col-sm-6">
-        				<div class="single-blog">
-        					<figure>
-        						<img src="<?= base_url()?>assets/frontend/images/events/image_03.jpg" alt="">
-        					</figure>
-        					<div class="blog-detail">
-        						<small>By Admin | August 10 2018</small>
-								<h4>Methods of Recuirtments</h4>
-								<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis sed sagittis at, sagittis quis neque. Praesent.</p>
-								<div class="link">
-									<a href="">Read more </a><i class="fas fa-long-arrow-alt-right"></i>
-								</div>
-        					</div>
-        					
-        					
-        				</div>
-        			</div>
+				<?php endforeach; ?>
+        			
+				
         		</div>
          	</div>
+			 <center><a href="" class="btn btn-primary">Semua Berita</a></center>
          </section>
           
 <?php 

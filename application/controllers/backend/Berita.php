@@ -48,7 +48,7 @@ class Berita extends CI_Controller
 			'id_kategori'	=> $this->input->post('id_kategori'),
 			'konten'		=> $this->input->post('konten'),
 			'thumbnail'     => $foto,
-			'waktu_buat'    => date('Y-m-d H:i:s')
+			'waktu_buat'    => date('d-m-Y')
 		];
 		$this->db->insert('tb_berita', $data);
 		$this->session->set_flashdata('sukses', '<div class="alert alert-success">Berhasil menambahkan berita !</div>');
@@ -85,7 +85,7 @@ class Berita extends CI_Controller
 			'judul'			=> $this->input->post('judul'),
 			'id_kategori'	=> $this->input->post('id_kategori'),
 			'konten'		=> $this->input->post('konten'),
-			'waktu_update'   => date('Y-m-d H:i:s')
+			'waktu_update'   => date('d-m-Y')
 		];
 		$this->db->where('id_berita', $id_berita)->update('tb_berita', $data);
 		$this->session->set_flashdata('sukses', '<div class="alert alert-info">Berhasil memperbahrui berita !</div>');
