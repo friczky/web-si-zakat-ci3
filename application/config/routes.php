@@ -2,7 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-$route['default_controller'] 			= 'welcome';
+$route['default_controller'] 			= 'frontend';
+
+// Frontend
+
+$route['home']							= 'frontend';
+$route['tentang']						= 'frontend/tentang';
+$route['layanan']						= 'frontend/layanan';
+$route['dokumentasi']					= 'frontend/dokumentasi';
+$route['kontak']						= 'frontend/kontak';
+$route['donasi']						= 'frontend/donasi';
 
 // login
 $route['login']							= 'backend/auth';

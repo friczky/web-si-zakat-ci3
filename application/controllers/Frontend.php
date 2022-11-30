@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Frontend extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,6 +20,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		redirect(base_url('login'));
+		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
+		$this->load->view('frontend/index',$data);
 	}
 }

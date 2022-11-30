@@ -100,7 +100,7 @@ $this->load->view('backend/komponen/sidebar-admin');
             </div>
 
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-12">
 								<div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Data Donasi</h3>
@@ -114,13 +114,13 @@ $this->load->view('backend/komponen/sidebar-admin');
                             </div>
                         </div>
                         <div class="card-body">
-                            <table class="table">
+                            <table id="example1" class="table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>Nama</th>
                                         <th>Jumlah</th>
-                                        <th>Tanggal</th>
+                                        <th>Kategori</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -129,7 +129,7 @@ $this->load->view('backend/komponen/sidebar-admin');
                                         <td><?= $no++?></td>
                                         <td><?= $d->nama?></td>
                                         <td><?= $d->jumlah?></td>
-                                        <td><?= $d->tanggal?></td>
+                                        <td><?= $d->kategori?></td>
                                     </tr>
                                     <?php endforeach?>
                                 </tbody>
@@ -137,43 +137,6 @@ $this->load->view('backend/komponen/sidebar-admin');
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <div class="card">
-                        <div class="card-header">
-                            <h3 class="card-title">Grafik Donasi</h3>
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <button type="button" class="btn btn-tool" data-card-widget="remove">
-                                    <i class="fas fa-times"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-8">
-                                    <div class="chart-responsive">
-                                        <canvas id="pieChart" height="150"></canvas>
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-4">
-                                    <ul class="chart-legend clearfix">
-                                        <li>
-                                            <i class="far fa-circle text-danger"></i>
-                                            Pemasukan</li>
-                                        <li>
-                                            <i class="far fa-circle text-success"></i>
-                                            Pengeluaran</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
                 </section>
             </div>
 

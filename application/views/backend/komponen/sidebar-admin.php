@@ -1,5 +1,5 @@
 <!-- Main Sidebar Container -->
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
+<aside class="main-sidebar sidebar-light-primary elevation-4">
     <!-- Brand Logo -->
     <a href="<?= base_url()?>" class="brand-link" target="_blank">
 	<?php $data = $this->db->get('tb_sistem')->row_array()?>
@@ -121,7 +121,7 @@
                         <i class="nav-icon fas fa-money-bill"></i>
                         <p>
                             Donasi
-							<span class="badge badge-secondary right"><?= $this->db->count_all('')?></span>
+							<span class="badge badge-secondary right"><?= $this->db->count_all('tb_donasi')?></span>
                         </p>
                     </a>
                 </li>
