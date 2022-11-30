@@ -105,19 +105,7 @@ $this->load->view('backend/komponen/sidebar-admin');
                     </div>
                     <!-- /.col -->
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label>Role</label>
-                                <select name="role" id="" class="form-control" required="required">
-                                    <option value="<?= $pengguna['role']?>">
-                                    <?php if($pengguna['role']== 0) { echo "Administrator";}else{echo "Pengguna";}?>
-                                        (Saat Ini)</option>
-                                    <option value="0">Administrator</option>
-                                    <option value="1">Pengguna</option>
-                                </select>
-                            </div>
-                            <!-- /.form-group -->
-                        </div>
+                       
                         <!-- /.col -->
                         <div class="col-md-6">
                             <div class="form-group">
