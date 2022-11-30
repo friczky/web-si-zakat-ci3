@@ -58,7 +58,6 @@ class Slider extends CI_Controller
 		$data = [
 			'judul'			=> $this->input->post('judul'),
 			'deskripsi'		=> $this->input->post('deskripsi'),
-			'tanggal'		=> date('d-m-Y', strtotime($this->input->post('tanggal'))),
 		];
 		$this->db->where('id', $id)->update('tb_slider', $data);
 		$this->session->set_flashdata('sukses', '<div class="alert alert-success">Berhasil memperbahrui slider !</div>');

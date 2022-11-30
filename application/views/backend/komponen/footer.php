@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <strong>Copyright &copy; 
-        <a href="<?= base_url()?>">CRUD MASTER</a>.</strong>
+        <a href="<?= base_url()?>">Admin</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
         <b>Version</b>
