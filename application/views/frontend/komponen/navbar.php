@@ -29,7 +29,8 @@
                     </ul>
                 </div>
                 <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
-                    <button class="btn btn-sm btn-success">Donasi</button>
+					<a href="<?= base_url()?>donasi" class="btn btn-sm btn-success">Donasi</a>
+                    <!-- <button class="btn btn-sm btn-success">Donasi</button> -->
                     <!-- <button class="btn btn-sm btn-default">Donate</button> -->
                 </div>
             </div>
@@ -53,25 +54,22 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= base_url()?>">Tentang</a>
+                                    <a class="nav-link" href="<?= base_url()?>tentang">Tentang</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= base_url()?>">Layanan</a>
-                                </li>
-
-                                <li class="nav-item">
-                                    <a class="nav-link" href="<?= base_url()?>">Dokumentasi</a>
+                                    <a class="nav-link" href="<?= base_url()?>layanan">Layanan</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= base_url()?>">Berita</a>
+                                    <a class="nav-link" href="<?= base_url()?>dokumentasi">Dokumentasi</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?= base_url()?>berita">Berita</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?= base_url()?>">Kontak</a>
+                                    <a class="nav-link" href="<?= base_url()?>kontak">Kontak</a>
                                 </li>
-
-
-
 
                             </ul>
 
