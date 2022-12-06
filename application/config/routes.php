@@ -14,7 +14,8 @@ $route['kontak']						= 'frontend/kontak';
 $route['donasi']						= 'frontend/donasi';
 $route['berita']						= 'frontend/berita';
 $route['baca/(:any)']					= 'frontend/baca/$1';
-$route['konfirmasi_donasi/(:any)']		= 'frontend/konfirmasi_donasi/$1';
+$route['konfirmasi']					= 'frontend/konfirmasi';
+$route['sukses']						= 'frontend/sukses';
 
 // login
 $route['login']							= 'backend/auth';

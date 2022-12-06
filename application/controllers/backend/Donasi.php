@@ -50,4 +50,6 @@ class Donasi extends CI_Controller
 		$this->session->set_flashdata('sukses', '<div class="alert alert-danger"> Berhasil Menghapus donasi !</div>');
 		redirect(base_url('dashboard/donasi'));
 	}
+
+
 }

@@ -79,78 +79,51 @@ class Frontend extends CI_Controller {
 		$this->load->view('frontend/donasi',$data);
 	}
 
-	// public function konfirmasi_donasi(){
-	// 	if(isset($_POST['next'])){
-	// 		$nama = $this->input->post('nama');
-	// 		$email = $this->input->post('email');
-	// 		$nohp = $this->input->post('nohp');
-	// 		$jumlah = $this->input->post('jumlah');
-	// 		$bank = $this->input->post('bank');
-	// 		$rek = $this->input->post('rek');
-	// 		$atas_nama = $this->input->post('atas_nama');
-	// 		$pesan = $this->input->post('pesan');
-	// 		$kode = $this->input->post('kode');
-	// 		$kode_donasi = $this->input->post('kode_donasi');
-	// 		$cek = $this->db->where('kode_donasi',$kode_donasi)->get('tb_donasi')->row_array();
-	// 		if($cek){
-	// 			$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Kode donasi sudah digunakan</div>');
-	// 			redirect('donasi');
-	// 		}else{
-	// 			$data = array(
-	// 				'nama' => $nama,
-	// 				'email' => $email,
-	// 				'nohp' => $nohp,
-	// 				'jumlah' => $jumlah,
-	// 				'bank' => $bank,
-	// 				'rek' => $rek,
-	// 				'atas_nama' => $atas_nama,
-	// 				'pesan' => $pesan,
-	// 				'kode' => $kode,
-	// 				'kode_donasi' => $kode_donasi,
-	// 				'tanggal' => date('Y-m-d')
-	// 			);
-	// 			$this->db->insert('tb_donasi',$data);
-	// 			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Donasi berhasil dikirim</div>');
-	// 			redirect('donasi');
-	// 		}
-	// 	}
+	public function konfirmasi(){
+		$id_bank = $this->input->post('bank');
+		$data['title'] = 'Konfirmasi Donasi';
+		$data['bank'] = $this->db->where('id', $id_bank)->get('tb_bank')->row_array();
+		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
+		$data['donasi'] = [
+			'nama' => $this->input->post('nama'),
+			'jumlah' => $this->input->post('jumlah'),
+			'pesan' => $this->input->post('pesan'),
+			'telepon' => $this->input->post('telepon'),
+		];
+		$this->load->view('frontend/konfirmasi', $data);
+	}
 
-	// 	if(isset($_POST['konfirmasi'])){
-	// 		$nama = $this->input->post('nama');
-	// 		$email = $this->input->post('email');
-	// 		$nohp = $this->input->post('nohp');
-	// 		$jumlah = $this->input->post('jumlah');
-	// 		$bank = $this->input->post('bank');
-	// 		$rek = $this->input->post('rek');
-	// 		$atas_nama = $this->input->post('atas_nama');
-	// 		$pesan = $this->input->post('pesan');
-	// 		$kode = $this->input->post('kode');
-	// 		$kode_donasi = $this->input->post('kode_donasi');
-	// 		$cek = $this->db->where('kode_donasi',$kode_donasi)->get('tb_donasi')->row_array();
-	// 		if($cek){
-	// 			$this->session-('pesan', '<div class="alert alert-danger" role="alert">Kode donasi sudah digunakan</div>');
-	// 			redirect('donasi');
-	// 		}else{
-	// 			$data = array(
-	// 				'nama' => $nama,
-	// 				'email' => $email,
-	// 				'nohp' => $nohp,
-	// 				'jumlah' => $jumlah,
-	// 				'bank' => $bank,
-	// 				'rek' => $rek,
-	// 				'atas_nama' => $atas_nama,
-	// 				'pesan' => $pesan,
-	// 				'kode' => $kode,
-	// 				'kode_donasi' => $kode_donasi,
-	// 				'tanggal' => date('Y-m-d')
-	// 			);
-	// 			$this->db->insert('tb_donasi',$data);
-	// 			$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Donasi berhasil dikirim</div>');
-	// 			redirect('donasi');
-	// 		}
-	// 	}
-
-	// }
-
-
+	public function sukses(){
+		if(isset($_POST['sukses'])){
+			$config['allowed_types'] = 'jpg|png|gif|pdf|jpeg|doc|docx';
+		$config['max_size'] = '0';
+		$config['upload_path'] = './uploads/bank/';
+		$this->load->library('upload', $config);
+		if ($this->upload->do_upload('foto')) {
+			$foto = $this->upload->data('file_name');
+		} else {
+			// $this->upload->display_errors();
+			echo "Format Gambar Tidak Didukung";
+		}
+		$id_bank = $this->input->post('bank');
+		$data['bank'] = $this->db->where('id', $id_bank)->get('tb_bank')->row_array();
+		$data['donasi'] = [
+			'nama' 		=> $this->input->post('nama'),
+			'jumlah' 	=> $this->input->post('jumlah'),
+			'telepon' 	=> $this->input->post('telepon'),
+			'keterangan' => $this->input->post('pesan'),
+			'kategori' 	=> 'Pemasukan',
+			'bank' 		=> $this->input->post('bank'),
+			'tanggal'	=> date('d-m-Y'),
+			'bukti_pembayaran'		=> $foto,
+		];
+		$this->db->insert('tb_donasi', $data['donasi']);
+		redirect('sukses');
+		} else{
+			$data['title'] = 'Sukses';
+			$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
+			$this->load->view('frontend/sukses',$data);
+		}
+		
+	}
 }
