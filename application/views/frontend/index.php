@@ -165,7 +165,7 @@ include 'komponen/navbar.php';
 				
         		</div>
          	</div>
-			 <center><a href="" class="btn btn-primary">Semua Berita</a></center>
+			 <center><a href="berita" class="btn btn-primary">Semua Berita</a></center>
          </section>
           
 <?php 

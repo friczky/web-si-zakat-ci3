@@ -14,6 +14,7 @@ $route['kontak']						= 'frontend/kontak';
 $route['donasi']						= 'frontend/donasi';
 $route['berita']						= 'frontend/berita';
 $route['baca/(:any)']					= 'frontend/baca/$1';
+$route['konfirmasi_donasi/(:any)']		= 'frontend/konfirmasi_donasi/$1';
 
 // login
 $route['login']							= 'backend/auth';
@@ -43,6 +44,11 @@ $route['dashboard/pengguna/edit/(:any)']	= 'backend/pengguna/edit/$1';
 $route['dashboard/dokumentasi']				= 'backend/dokumentasi';
 $route['dashboard/dokumentasi/tambah']		= 'backend/dokumentasi/tambah';
 $route['dashboard/dokumentasi/edit/(:any)']	= 'backend/dokumentasi/edit/$1';
+
+// bank
+$route['dashboard/bank']				= 'backend/bank';
+$route['dashboard/bank/tambah']			= 'backend/bank/tambah';
+$route['dashboard/bank/edit/(:any)']	= 'backend/bank/edit/$1';
 
 // slider
 $route['dashboard/slider']				= 'backend/slider';

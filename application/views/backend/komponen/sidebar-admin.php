@@ -126,16 +126,33 @@
                     </a>
                 </li>
 
-                 <!-- Layanan Page  -->
-				 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/donasi" class="nav-link">
-                        <i class="nav-icon fas fa-money-bill"></i>
+				<!-- Article Page  -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link ">
+                        <i class="nav-icon fas fa-love"></i>
                         <p>
                             Donasi
-							<span class="badge badge-secondary right"><?= $this->db->count_all('tb_donasi')?></span>
+                            <i class="fas fa-angle-left right"></i>
+                            <span class="badge badge-primary right"><?= $this->db->count_all('tb_berita')?></span>
                         </p>
                     </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="<?= base_url()?>dashboard/donasi" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Donasi</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url()?>dashboard/bank" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Data Bank</p>
+                            </a>
+                        </li>
+					</ul>
                 </li>
+
+               
 
                 <!-- Users Page  -->
                 <li class="nav-item">
