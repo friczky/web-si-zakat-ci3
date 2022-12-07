@@ -9,6 +9,7 @@ class Frontend extends CI_Controller {
 		$data['slider'] = $this->db->order_by('id','desc')->get('tb_slider')->result();
 		$data['berita'] = $this->db->select('tb_berita.*,tb_kategori.kategori,tb_pengguna.nama')->order_by('id_berita','desc')->from('tb_berita')->join('tb_kategori','tb_kategori.id_kategori = tb_berita.id_kategori')->join('tb_pengguna','tb_pengguna.id_pengguna = tb_berita.id_user')->get()->result();
 		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
+		$data['layanan'] = $this->db->get('tb_layanan',3)->result();
 		$data['title'] = 'Home - '.$data['sistem']['nama_web'];
 		$this->load->view('frontend/index',$data);
 	}
@@ -24,6 +25,7 @@ class Frontend extends CI_Controller {
 	{
 		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
 		$data['title'] = 'Layanan - '.$data['sistem']['nama_web'];
+		$data['layanan'] = $this->db->get('tb_layanan')->result();
 		$this->load->view('frontend/layanan',$data);
 	}
 

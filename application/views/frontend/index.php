@@ -40,22 +40,7 @@ include 'komponen/navbar.php';
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
                 <h2>Tentang <?= $sistem['nama_web']?></h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius faucibus
-                    ligula non congue. Suspendisse at pretium massa, sit amet
-                    vulputate nibh. Nam posuere eros dolor. Donec vel arcu sagittis, pretium nisl </p>
-                <p> Cras faucibus laoreet nibh, sit amet tincidunt leo mollis in. Etiam eu mauris metus.
-                    Nulla facilisi. Etiam vestibulum,
-                    nisi et convallis elementum, leo orci aliquam metus, id posuere massa neque vitae
-                    arcu.</p>
-
-                <p>Integer vulputate vehicula dolor a eleifend. Duis aliquam condimentum sapien,
-                    eget tempor justo. Aenean porttitor nibh metus, sollicitudin egestas metus posuere et
-                    . Fusce egestas volutpat metus, in sodales sem bibendum porta. Nunc hendrerit nunc sit
-                    amet tellus posuere, at malesuada sem gravida. Integer maximus ultricies augue, at
-                    dapibus elit bibendum consequat. Cras faucibus tellus eleifend, fermentum purus in,
-                    dapibus sapien. Praesent nec ornare risus. Etiam iaculis, ligula vel gravida
-                    vestibulum, urna justo posuere ante,
-                    id pretium massa arcu sed mi. Nunc a sollicitudin sem. Duis tempus </p>
+                <?= $sistem['tentang']?>
             </div>
             <div class="image-part col-md-6">
                 <div class="about-quick-box row">
@@ -102,34 +87,18 @@ include 'komponen/navbar.php';
                 <p>We are a non-profital & Charity raising money for child education</p> 
             </div>
             <div class="event-ro row">
+				<?php foreach ($layanan as $data) : ?>
                 <div class="col-md-4 col-sm-6">
                     <div class="event-box">
                         <img src="<?= base_url()?>assets/frontend/images/events/image_08.jpg" alt="">
-                        <h4>Child Education in Africa</h4>
+                        <b><h4><?= $data->nama?></h4></b>
                         
-                        <p class="raises"><span>Raised : $34,425</span> / $500,000 </p>
-                        <p class="desic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's </p>
-                        <button class="btn btn-success btn-sm">Donate Now</button>
+                        <!-- <p class="raises"><span>Raised : $34,425</span> / $500,000 </p> -->
+                        <p class="desic"><?= $data->deskripsi?> </p>
+                        <a href="donasi" class="btn btn-primary">Donasi Sekarang</a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="event-box">
-                        <img src="<?= base_url()?>assets/frontend/images/events/image_06.jpg" alt="">
-                        <h4>Child Education in Africa</h4>
-                        <p class="raises"><span>Raised : $34,425</span> / $500,000 </p>
-                        <p class="desic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's </p>
-                        <button class="btn btn-success btn-sm">Donate Now</button>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="event-box">
-                        <img src="<?= base_url()?>assets/frontend/images/events/image_04.jpg" alt="">
-                        <h4>Child Education in Africa</h4>
-                        <p class="raises"><span>Raised : $34,425</span> / $500,000 </p>
-                        <p class="desic">Lorem Ipsum is simply dummy text of the printing and typesetting industry.  Lorem Ipsum has been the industry's </p>
-                        <button class="btn btn-success btn-sm">Donate Now</button>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>   

@@ -129,11 +129,11 @@
 				<!-- Article Page  -->
                 <li class="nav-item">
                     <a href="#" class="nav-link ">
-                        <i class="nav-icon fas fa-love"></i>
+                        <i class="nav-icon fas fa-tasks"></i>
                         <p>
                             Donasi
                             <i class="fas fa-angle-left right"></i>
-                            <span class="badge badge-primary right"><?= $this->db->count_all('tb_berita')?></span>
+                            <span class="badge badge-primary right"><?= $this->db->count_all('tb_donasi')?></span>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
