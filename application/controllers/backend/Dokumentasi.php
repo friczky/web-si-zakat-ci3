@@ -12,13 +12,15 @@ class Dokumentasi extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Data dokumentasi';
+		$data['menu'] = 'dokumentasi';
+		$data['menuopen'] = '';
 		$data['dokumentasi'] = $this->db->order_by('id', 'desc')->get('tb_dokumentasi')->result();
 		$this->load->view('backend/dokumentasi/index', $data);
 	}
 
 	public function store()
 	{
-		$config['allowed_types'] = 'jpg|png|gif';
+		$config['allowed_types'] = 'jpg|png|gif|jpeg';
 		$config['max_size'] = '0';
 		$config['upload_path'] = './uploads/dokumentasi/';
 		$this->load->library('upload', $config);
@@ -41,7 +43,7 @@ class Dokumentasi extends CI_Controller
 
 	public function update($id)
 	{
-		$config['allowed_types'] = 'jpg|png|gif';
+		$config['allowed_types'] = 'jpg|png|gif|jpeg';
 		$config['max_size'] = '0';
 		$config['upload_path'] = './uploads/dokumentasi/';
 		$this->load->library('upload', $config);

@@ -53,7 +53,7 @@
 
 				<!-- Dashboard Page  -->
                 <li class="nav-item">
-                    <a href="<?= base_url()?>dashboard" class="nav-link ">
+                    <a href="<?= base_url()?>dashboard" class="nav-link <?=$menu == 'dashboard' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
@@ -62,8 +62,8 @@
                 </li>
 
 				<!-- Article Page  -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
+                <li class="nav-item <?= $menuopen == 'berita' ?  'menu-open' : ''?>">
+                    <a href="#" class="nav-link  <?= $menuopen == 'berita' ?  'active' : ''?>">
                         <i class="nav-icon fas fa-book"></i>
                         <p>
                             Berita
@@ -73,19 +73,19 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/berita" class="nav-link">
+                            <a href="<?= base_url()?>dashboard/berita" class="nav-link <?=$menu == 'berita' ? 'active' : ''?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Berita</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/berita/kategori" class="nav-link">
+                            <a href="<?= base_url()?>dashboard/berita/kategori" class="nav-link <?=$menu == 'berita-kategori' ? 'active' : ''?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kategori</p>
                             </a>
                         </li>
 						<li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/berita/komentar" class="nav-link">
+                            <a href="<?= base_url()?>dashboard/berita/komentar" class="nav-link <?=$menu == 'berita-komentar' ? 'active' : ''?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Komentar</p>
                             </a>
@@ -95,7 +95,7 @@
 
 				<!-- Slider Page  -->
 				<li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/slider" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/slider" class="nav-link <?=$menu == 'slider' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             Slider
@@ -106,7 +106,7 @@
 
 				 <!-- Dokumentasi Page  -->
 				 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/dokumentasi" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/dokumentasi" class="nav-link <?=$menu == 'dokumentasi' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-image"></i>
                         <p>
                             Dokumentasi
@@ -117,7 +117,7 @@
 
 				 <!-- Layanan Page  -->
 				 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/layanan" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/layanan" class="nav-link <?=$menu == 'layanan' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-tasks"></i>
                         <p>
                             Layanan
@@ -127,8 +127,8 @@
                 </li>
 
 				<!-- Article Page  -->
-                <li class="nav-item">
-                    <a href="#" class="nav-link ">
+                <li class="nav-item <?= $menuopen == 'donasi' ?  'menu-open' : ''?>">
+                    <a href="#" class="nav-link <?= $menuopen == 'donasi' ?  'active' : ''?>">
                         <i class="nav-icon fas fa-tasks"></i>
                         <p>
                             Donasi
@@ -138,25 +138,25 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/donasi" class="nav-link">
+                            <a href="<?= base_url()?>dashboard/donasi" class="nav-link <?=$menu == 'donasi' ? 'active' : ''?>" >
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Donasi</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="<?= base_url()?>dashboard/bank" class="nav-link">
+                            <a href="<?= base_url()?>dashboard/bank" class="nav-link <?=$menu == 'bank' ? 'active' : ''?>">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Data Bank</p>
                             </a>
                         </li>
-					</ul>
+					</ul> 
                 </li>
 
                
 
                 <!-- Users Page  -->
                 <li class="nav-item">
-					<a href="<?= base_url()?>dashboard/pengguna" class="nav-link">
+					<a href="<?= base_url()?>dashboard/pengguna" class="nav-link <?=$menu == 'pengguna' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-users"></i>
                         <p>
                             Pengguna
@@ -166,7 +166,7 @@
                 </li>
 
 				<li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/sistem/kontak" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/sistem/kontak" class="nav-link <?=$menu == 'kontak' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-hashtag"></i>
                         <p>
                             Kontak
@@ -175,7 +175,7 @@
                 </li>
 
 				<li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/sistem" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/sistem" class="nav-link <?=$menu == 'tentang' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-info-circle"></i>
                         <p>
                             Tentang Web
@@ -184,7 +184,7 @@
                 </li>
 
                 <li class="nav-item">	
-                    <a href="<?= base_url()?>dashboard/profile" class="nav-link">
+                    <a href="<?= base_url()?>dashboard/profile" class="nav-link <?=$menu == 'profile' ? 'active' : ''?>">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             Profile

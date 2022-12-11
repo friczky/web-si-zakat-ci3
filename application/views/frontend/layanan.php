@@ -15,7 +15,7 @@ include 'komponen/navbar.php';
 				<?php foreach ($layanan as $data) : ?>
 					<div class="col-md-4 col-sm-6">
 						<div class="event-box">
-							<img src="<?= base_url()?>assets/frontend/images/events/image_08.jpg" alt="">
+							<img src="<?= base_url('uploads/layanan/').$data->foto?>" alt="">
 							<b><h4><?= $data->nama?></h4></b>
 							
 							<!-- <p class="raises"><span>Raised : $34,425</span> / $500,000 </p> -->

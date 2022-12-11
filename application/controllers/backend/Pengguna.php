@@ -12,6 +12,8 @@ class Pengguna extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Data Pengguna';
+		$data['menu'] = 'pengguna';
+		$data['menuopen'] = '';
 		$data['pengguna'] = $this->db->order_by('id_pengguna', 'desc')->get('tb_pengguna')->result();
 		$this->load->view('backend/pengguna/index', $data);
 	}
@@ -19,6 +21,8 @@ class Pengguna extends CI_Controller
 	public function tambah()
 	{
 		$data['title'] = 'Tambah Pengguna';
+		$data['menu'] = 'pengguna-tambah';
+		$data['menuopen'] = '';
 		$this->load->view('backend/pengguna/tambah', $data);
 	}
 
@@ -50,6 +54,8 @@ class Pengguna extends CI_Controller
 	public function edit($id_pengguna)
 	{
 		$data['title'] = 'Edit Pengguna';
+		$data['menu'] = 'pengguna-edit';
+		$data['menuopen'] = '';
 		$data['pengguna'] = $this->db->where('id_pengguna', $id_pengguna)->get('tb_pengguna')->row_array();
 		$this->load->view('backend/pengguna/edit', $data);
 	}

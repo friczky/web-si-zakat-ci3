@@ -28,9 +28,9 @@ include 'komponen/navbar.php';
                             |
                             <?= $data->waktu_buat?></small>
                         <h4><?= $data->judul?></h4>
-                        <p><?= $data->konten?></p>
+                        	<?= substr($data->konten,0,100)?>...
                         <div class="">
-                            <a href="" class="btn btn-primary">Baca
+                            <a href="<?= base_url('baca/'.$data->id_berita)?>" class="btn btn-primary">Baca
                             </a>
                         </div>
                     </div>

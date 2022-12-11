@@ -13,6 +13,8 @@ class Berita extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Data Berita';
+		$data['menu'] = 'berita';
+		$data['menuopen'] = 'berita';
 		$data['berita'] = $this->db->order_by('id_berita', 'desc')->from('tb_berita')->join('tb_kategori', 'tb_kategori.id_kategori = tb_berita.id_kategori')->join('tb_pengguna', 'tb_pengguna.id_pengguna = tb_berita.id_user')->get()->result();
 		$this->load->view('backend/berita/index', $data);
 	}
@@ -20,6 +22,8 @@ class Berita extends CI_Controller
 	public function tambah()
 	{
 		$data['title'] = 'Tambah Berita';
+		$data['menu'] = 'berita-tambah';
+		$data['menuopen'] = 'berita';
 		$data['kategori'] = $this->db->get('tb_kategori')->result();
 		$this->load->view('backend/berita/tambah', $data);
 	}
@@ -58,6 +62,8 @@ class Berita extends CI_Controller
 	public function edit($id_berita)
 	{
 		$data['title'] = 'Edit Berita';
+		$data['menu'] = 'berita-edit';
+		$data['menuopen'] = 'berita';
 		$data['kategori'] = $this->db->get('tb_kategori')->result();
 		$data['berita'] = $this->db->where('id_berita', $id_berita)->from('tb_berita')->join('tb_kategori', 'tb_kategori.id_kategori = tb_berita.id_kategori')->get()->row_array();
 		$this->load->view('backend/berita/edit', $data);
@@ -128,6 +134,8 @@ class Berita extends CI_Controller
 			redirect(base_url('dashboard/berita/kategori'));
 		} else {
 			$data['title'] = 'Kategori Berita';
+			$data['menu'] = 'berita-kategori';
+			$data['menuopen'] = 'berita';
 			$data['kategori'] = $this->db->order_by('id_kategori', 'DESC')->get('tb_kategori')->result();
 			$this->load->view('backend/berita/kategori', $data);
 		}
@@ -150,6 +158,8 @@ class Berita extends CI_Controller
 	{
 		$data['komentar'] = $this->db->from('tb_komentar')->join('tb_berita', 'tb_berita.id_berita = tb_komentar.id_berita')->get()->result();
 		$data['title'] 	= 'Data Komentar';
+		$data['menu'] = 'berita-komentar';
+		$data['menuopen'] = 'berita';
 		$this->load->view('backend/berita/komentar', $data);
 	}
 

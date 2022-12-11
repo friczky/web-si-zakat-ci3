@@ -49,6 +49,7 @@ $this->load->view('backend/komponen/sidebar-admin');
 										<th>No.</th>
                     <th>Nama Layanan</th>
                     <th>Deskripsi</th>
+                    <th>Foto</th>
 										<th>Aksi</th>
                   </tr>
                   </thead>
@@ -58,6 +59,7 @@ $this->load->view('backend/komponen/sidebar-admin');
 										<td><?= $no++?>.</td>
                     <td><?= $data->nama?></td>
                     <td><?= $data->deskripsi?></td>
+                    <td><img src="<?= base_url('uploads/layanan/').$data->foto?>" width="50px" alt=""></td>
 										<td>
 										<a href="#edit" data-toggle="modal" data-target="#edit<?= $data->id?>" class="btn btn-primary"><i class="fa fa-edit"></i></a>
 										<a href="<?= base_url()?>backend/layanan/hapus/<?= $data->id?>" onclick="return confirm('Apakah ingin menghapus layanan ini ?');" class="btn btn-danger"><i class="fa fa-trash"></i></a>

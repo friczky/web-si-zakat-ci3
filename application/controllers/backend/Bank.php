@@ -12,6 +12,8 @@ class Bank extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Data bank';
+		$data['menu'] = 'bank';
+		$data['menuopen'] = 'donasi';
 		$data['bank'] = $this->db->order_by('id', 'desc')->get('tb_bank')->result();
 		$this->load->view('backend/bank/index', $data);
 	}

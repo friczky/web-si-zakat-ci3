@@ -12,6 +12,8 @@ class Donasi extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Data donasi';
+		$data['menu'] = 'donasi';
+		$data['menuopen'] = 'donasi';
 		$data['donasi'] = $this->db->order_by('id', 'desc')->get('tb_donasi')->result();
 		$this->load->view('backend/donasi/index', $data);
 	}

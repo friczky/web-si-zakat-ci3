@@ -21,6 +21,8 @@ class Dashboard extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Home' ;
+		$data['menu'] = 'dashboard';
+		$data['menuopen'] = '';
 		$data['donasi'] = $this->db->order_by('id', 'desc')->get('tb_donasi')->result();
 		$this->load->view('backend/v_dashboard',$data);
 	}

@@ -21,9 +21,11 @@ class Profile extends CI_Controller {
 	public function index()
 	{
 		$data['title'] = 'Profile';
+		$data['menu'] = 'profile';
+		$data['menuopen'] = '';
 		$data['user'] = $this->db->where('id_pengguna',$this->session->userdata('id'))->get('tb_pengguna')->row_array();
-    $data['artikel'] = $this->db->where('id_user',$this->session->userdata('id'))->count_all_results('tb_berita');
-    $data['test'] = 'test';
+    	$data['artikel'] = $this->db->where('id_user',$this->session->userdata('id'))->count_all_results('tb_berita');
+    	$data['test'] = 'test';
 		$this->load->view('backend/profile/index',$data);
   }
 

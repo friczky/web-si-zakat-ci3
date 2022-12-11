@@ -33,7 +33,9 @@ class Sistem extends CI_Controller {
 			$this->session->set_flashdata('sukses', '<div class="alert alert-info">Berhasil memperbahrui Halaman Tentang !</div>');
 			redirect(base_url('dashboard/sistem'));
 		}
-		$data['title'] = 'Sistem Website';
+		$data['title'] = 'Tentang';
+		$data['menu'] = 'tentang';
+		$data['menuopen'] = '';
 		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
 		$this->load->view('backend/sistem/sistem',$data);
 	}
@@ -52,6 +54,8 @@ class Sistem extends CI_Controller {
 			redirect(base_url('dashboard/sistem/kontak'));
         }else {
 			$data['title'] = 'Kontak';
+			$data['menu'] = 'kontak';
+			$data['menuopen'] = '';
 			$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
 			$this->load->view('backend/sistem/kontak',$data);
 		}

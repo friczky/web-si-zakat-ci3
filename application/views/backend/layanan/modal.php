@@ -34,6 +34,15 @@
 						<textarea name="deskripsi" class="form-control" id="" cols="10" rows="10" required></textarea>		
 						</div>
                     </div>
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Foto</label>
+                        </div>
+                        <div class="col-sm-10">
+						<input type="file" name="foto" class="form-control" required>	
+						</div>
+                    </div>
+					
 
                     <div class="form-group row">
                         <div class="col-sm-2">
@@ -90,6 +99,16 @@
 						<textarea name="deskripsi" class="form-control" id="" cols="30" rows="10" required><?= $data->deskripsi?></textarea>		
 					</div>
                     </div>
+					<div class="form-group row">
+                        <div class="col-sm-2">
+                            <label for="">Foto</label>
+                        </div>
+                        <div class="col-sm-10">
+						<input type="file" name="foto"  class="form-control" required>	
+						<input type="hidden" name="foto_old" value="<?= $data->foto?>" class="form-control" required>	
+						</div>
+                    </div>
+					
 
                     <div class="form-group row">
                         <div class="col-sm-2">

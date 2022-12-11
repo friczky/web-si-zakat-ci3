@@ -12,6 +12,8 @@ class Slider extends CI_Controller
 	public function index()
 	{
 		$data['title'] = 'Data slider';
+		$data['menu'] = 'slider';
+		$data['menuopen'] = '';
 		$data['slider'] = $this->db->order_by('id', 'desc')->get('tb_slider')->result();
 		$this->load->view('backend/slider/index', $data);
 	}
