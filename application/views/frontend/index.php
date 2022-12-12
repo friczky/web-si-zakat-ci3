@@ -117,14 +117,16 @@ include 'komponen/navbar.php';
         			<div class="col-md-4 col-sm-6">
         				<div class="single-blog">
         					<figure>
-        						<img src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>" alt="">
+        						<img src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>" width="100%" height="200px" alt="">
         					</figure>
         					<div class="blog-detail">
         						<small>By <?= $data->nama?> | <?= $data->waktu_buat?></small>
 								<h4><?= $data->judul?></h4>
-								<p><?= $data->konten?></p>
+								<hr>
+								<p align="justify"><?= substr($data->konten,0,100)?>...</p>
+								<hr>
 								<div class="">
-									<a href="" class="btn btn-primary">Baca </a>
+									<a href="<?= base_url('baca/'.$data->id_berita)?>" class="btn btn-primary">Baca </a>
 								</div>
         					</div>
         				</div>

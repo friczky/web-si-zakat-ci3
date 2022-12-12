@@ -20,7 +20,7 @@ include 'komponen/navbar.php';
             <div class="col-md-4 col-sm-6">
                 <div class="single-blog">
                     <figure>
-                        <img src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>" alt="">
+                        <img src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>" width="100%" height="200px" alt="">
                     </figure>
                     <div class="blog-detail">
                         <small>By

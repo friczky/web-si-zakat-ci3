@@ -11,7 +11,10 @@ include 'komponen/navbar.php';
 
         <div class="row natur-row no-margin w-100">
             <div class="text-part col-md-6">
-                <h2>Tentang <?= $sistem['nama_web']?></h2>
+                <h2 align="center">Tentang <br><?= $sistem['nama_web']?></h2>
+				<hr>
+				<img src="<?= base_url('uploads/sistem/'.$sistem['logo'])?>" alt="">
+				<br><br>
                 <?= $sistem['tentang']?>
             </div>
             <div class="image-part col-md-6">
