@@ -132,8 +132,6 @@ include 'komponen/navbar.php';
         				</div>
         			</div>
 				<?php endforeach; ?>
-        			
-				
         		</div>
          	</div>
 			 <center><a href="berita" class="btn btn-primary">Semua Berita</a></center>
