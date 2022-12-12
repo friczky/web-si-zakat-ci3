@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="<?= base_url()?>assets/frontend/plugins/slider/css/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url()?>assets/frontend/plugins/slider/css/owl.theme.default.css">
     <link rel="stylesheet" type="text/css" href="<?= base_url()?>assets/frontend/css/style.css" />
+
+	<!-- data tables  -->
+	<link rel="stylesheet" href="<?= base_url()?>assets/backend/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" href="<?= base_url()?>assets/backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" href="<?= base_url()?>assets/backend/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body>

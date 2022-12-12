@@ -18,20 +18,21 @@
                     <ul class="ulright">
                        <li> <small>Folow Us </small>:</li>
                         <li>
-                            <a href=""><i class="fab fa-facebook-square"></i></a>
+                            <a href="https://facebook.com/<?= $sistem['facebook']?>"><i class="fab fa-facebook-square"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href="https://instagram.com/<?= $sistem['instagram']?>"><i class="fab fa-instagram"></i></a>
                         </li>
                         <li>
-							<a href=""><i class="fab fa-youtube"></i></a>
+							<a href="https://youtube.com/<?= $sistem['youtube']?>"><i class="fab fa-youtube"></i></a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
 					<a href="<?= base_url()?>donasi" class="btn btn-sm btn-success">Donasi</a>
+					<a href="<?= base_url()?>laporan-donasi" class="btn btn-sm btn-warning">Laporan Donasi</a>
                     <!-- <button class="btn btn-sm btn-success">Donasi</button> -->
-                    <!-- <button class="btn btn-sm btn-default">Donate</button> -->
+                    <!-- <button class="btn btn-sm btn-warning">Laporan Donasi</button> -->
                 </div>
             </div>
         </div>

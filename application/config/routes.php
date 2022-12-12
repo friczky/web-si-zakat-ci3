@@ -12,6 +12,7 @@ $route['layanan']						= 'frontend/layanan';
 $route['dokumentasi']					= 'frontend/dokumentasi';
 $route['kontak']						= 'frontend/kontak';
 $route['donasi']						= 'frontend/donasi';
+$route['laporan-donasi']				= 'frontend/laporan_donasi';
 $route['berita']						= 'frontend/berita';
 $route['baca/(:any)']					= 'frontend/baca/$1';
 $route['konfirmasi']					= 'frontend/konfirmasi';

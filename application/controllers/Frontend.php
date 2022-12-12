@@ -81,6 +81,13 @@ class Frontend extends CI_Controller {
 		$this->load->view('frontend/donasi',$data);
 	}
 
+	public function laporan_donasi(){
+		$data['sistem'] = $this->db->where('id_sistem',1)->get('tb_sistem')->row_array();
+		$data['donasi'] = $this->db->select('tb_donasi.*,tb_bank.nama_bank,tb_bank.no_rek,tb_bank.nama_pemilik')->order_by('id','desc')->from('tb_donasi')->join('tb_bank','tb_bank.nama_bank = tb_donasi.bank')->get()->result();
+		$data['title'] = 'Laporan Donasi - '.$data['sistem']['nama_web'];
+		$this->load->view('frontend/laporan-donasi',$data);
+	}
+
 	public function konfirmasi(){
 		$id_bank = $this->input->post('bank');
 		$data['title'] = 'Konfirmasi Donasi';
