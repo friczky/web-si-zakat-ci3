@@ -4,7 +4,6 @@ include 'komponen/navbar.php';
 
 ?>
 
-
 <section class="our-blog">
     <div class="container">
         <div class="row session-title">
@@ -20,15 +19,21 @@ include 'komponen/navbar.php';
             <div class="col-md-4 col-sm-6">
                 <div class="single-blog">
                     <figure>
-                        <img src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>" width="100%" height="200px" alt="">
+                        <img
+                            src="<?= base_url()?>uploads/berita/<?= $data->thumbnail?>"
+                            width="100%"
+                            height="200px"
+                            alt="">
                     </figure>
                     <div class="blog-detail">
                         <small>By
                             <?= $data->nama?>
                             |
                             <?= $data->waktu_buat?></small>
-                        <h4><?= $data->judul?></h4>
-                        	<?= substr($data->konten,0,100)?>...
+                        <b><h4><?= $data->judul?></h4></b>
+                        <hr>
+                        <?= substr($data->konten,0,100)?>...
+                        <hr>
                         <div class="">
                             <a href="<?= base_url('baca/'.$data->id_berita)?>" class="btn btn-primary">Baca
                             </a>
