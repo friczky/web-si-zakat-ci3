@@ -73,12 +73,6 @@ include 'komponen/navbar.php';
         </div>
     </div>
 </div>     
-   
-   
-
-   
-
-    
      <!-- ################# Events Start Here#######################--->
     <section class="events">
         <div class="container">
