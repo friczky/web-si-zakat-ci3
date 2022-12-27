@@ -14,6 +14,7 @@ jobs:
         run: |
           whoami
           ls
+          eval "$(ssh-agent -s)"
           ssh-add ./system/.ssh
           ssh friczky@34.101.143.10 << EOF
           cd /www/wwwroot/zakat.akademi.my.id/web-si-zakat-ci3
