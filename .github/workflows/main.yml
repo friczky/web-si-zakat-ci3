@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: Deploy to server
         run: 
-          ssh-add $PRIVATE_KEY
+          ssh-add "$PRIVATE_KEY"
           
