@@ -15,7 +15,7 @@ jobs:
           # Menyimpan alamat IP server
           SERVER="34.101.143.10"
           # Menyimpan nama user yang akan digunakan untuk login ke server
-          USER="frczky"
+          USER="friczky"
           # Menyimpan lokasi folder proyek di server
           TARGET="/www/wwwroot/zakat.akademi.my.id/web-si-zakat-ci3"
           # Menyimpan lokasi folder proyek di komputer Anda
