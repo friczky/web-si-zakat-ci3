@@ -11,6 +11,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy to server
-        run: |
+        run: 
           echo "this is private key $PRIVATE_KEY"
-          EOF
+          
