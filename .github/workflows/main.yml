@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  
+  deploy:
+    
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to server
+        run: |
+          ssh-add $PRIVATE_KEY
+          # Menyimpan alamat IP server
+          SERVER="34.101.143.10"
+          # Menyimpan nama user yang akan digunakan untuk login ke server
+          USER="frczky"
+          # Menyimpan lokasi folder proyek di server
+          TARGET="/www/wwwroot/zakat.akademi.my.id/web-si-zakat-ci3"
+          # Menyimpan lokasi folder proyek di komputer Anda
+          SOURCE=$(pwd)
+          # Mengirim perubahan-perubahan ke server dengan menggunakan rsync
+          rsync -avz --delete --exclude=".git" "$SOURCE" "$USER@$SERVER:$TARGET"
+          # Masuk ke server dengan menggunakan ssh
+          ssh "$USER@$SERVER" << EOF
+            # Berpindah ke folder proyek di server
+            cd "$TARGET"
+            # Mengambil perubahan-perubahan terbaru dari remote repository
+            git pull
+            #git fetch --all
+            # Mengambil perubahan-perubahan terbaru dari branch yang telah di-specify
+            #git reset --hard origin/master
+          EOF
