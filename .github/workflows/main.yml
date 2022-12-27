@@ -23,7 +23,7 @@ jobs:
           # Mengirim perubahan-perubahan ke server dengan menggunakan rsync
           
           # Masuk ke server dengan menggunakan ssh
-          ssh -i "$PRIVATE_KEY" $USER@$SERVER:$TARGET<< EOF
+          ssh -i "$PRIVATE_KEY" $USER@$SERVER << EOF
           # Berpindah ke folder proyek di server
           cd "$TARGET"
           # Mengambil perubahan-perubahan terbaru dari remote repository
