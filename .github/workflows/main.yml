@@ -17,7 +17,6 @@ jobs:
           eval "$(ssh-agent -s)"
           sudo chmod 600 ./system/.ssh
           ssh-add ./system/.ssh
-          sudo chmod 755 ~/.ssh
           ssh friczky@34.101.143.10 << EOF
           cd /www/wwwroot/zakat.akademi.my.id/web-si-zakat-ci3
           git pull
