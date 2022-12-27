@@ -15,9 +15,8 @@ jobs:
           whoami
           ls
           eval "$(ssh-agent -s)"
-          sudo chmod 600 ./system/.ssh
+          #sudo chmod 600 ./system/.ssh
           ssh-add ./system/.ssh
-          # import ssh private key
           mkdir -p ~/.ssh
           ls -ls
           echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
